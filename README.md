@@ -16,15 +16,21 @@ cd hf-perftest
 pip install -e .
 ```
 
-### Claude Code Skill
+### AI Coding Tool Integration
 
-To add `hf-perftest` as a Claude Code skill so Claude can help you run benchmarks:
+Install the hf-perftest skill/rules for your AI coding tool:
 
 ```bash
-claude install-skill https://github.com/gradio-app/hf-perftest
+# Install for all supported tools (Claude Code, Cursor, Codex)
+hf-perftest install-skill
+
+# Or pick one
+hf-perftest install-skill claude
+hf-perftest install-skill cursor
+hf-perftest install-skill codex
 ```
 
-This installs the skill from `.claude/skills/hf-perftest/SKILL.md` in the repo. Once installed, you can use `/hf-perftest` in Claude Code or just ask Claude to benchmark a Gradio app.
+This writes the appropriate skill/rules file into your project so your AI assistant knows how to use hf-perftest.
 
 ## Quick Start
 
