@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hf-perftest"
+version = "0.1.0"
+description = "Performance benchmarking tool for Gradio apps"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx",
+    "numpy",
+    "tqdm",
+    "huggingface-hub[hf_xet]",
+]
+
+[project.scripts]
+hf-perftest = "hf_perftest.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["hf_perftest"]
