@@ -16,6 +16,16 @@ cd hf-perftest
 pip install -e .
 ```
 
+### Claude Code Skill
+
+To add `hf-perftest` as a Claude Code skill so Claude can help you run benchmarks:
+
+```bash
+claude install-skill https://github.com/gradio-app/hf-perftest
+```
+
+This installs the skill from `.claude/skills/hf-perftest/SKILL.md` in the repo. Once installed, you can use `/hf-perftest` in Claude Code or just ask Claude to benchmark a Gradio app.
+
 ## Quick Start
 
 Run a benchmark against a Gradio app:
